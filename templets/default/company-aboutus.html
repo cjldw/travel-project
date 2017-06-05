@@ -279,7 +279,8 @@
 			    "use strict"
 				var E_aboutus = $(".js-aboutus > a")
                 var E_aboutus_content = $(".js-aboutus-content > .rightcontent");
-				E_aboutus.on("click", function () {
+				E_aboutus.on("click", function (e) {
+				    e.preventDefault();
 				    var that = $(this)
                     var V_index = that.index();
 					that.addClass("active").siblings("a").removeClass("active");
