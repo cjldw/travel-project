@@ -1,0 +1,33 @@
+html,body{background-color: #e0f1ee;}
+
+.themetourbanner {width: 100%; padding: 0; margin: 0;}
+
+.themetourbanner img{width: 100%;}
+
+
+.themetourTop {width: 100%; height: 413px;background: url(../img/themetour/themetourmenubg.jpg) no-repeat center center;background-size: auto 100%;padding: 0;margin: 0;text-align: center;}
+
+.themetourTop a{display: inline-block;background-position: center top;background-repeat: no-repeat;height: 280px;margin: 66px 20px;text-decoration: none;}
+
+.themetourTop a p{font-size: 56px;padding-top: 153px;color: #595757;letter-spacing: 20px;}
+
+.themetourTop a:nth-child(1){background-image: url(../img/themetour/themetourmenuico1.png);}
+.themetourTop a:nth-child(2){background-image: url(../img/themetour/themetourmenuico2.png);}
+.themetourTop a:nth-child(3){background-image: url(../img/themetour/themetourmenuico3.png);}
+.themetourTop a:nth-child(4){background-image: url(../img/themetour/themetourmenuico4.png);}
+.themetourTop a:nth-child(5){background-image: url(../img/themetour/themetourmenuico5.png);}
+
+
+.themetourlist{padding: 0 5%;margin-bottom: 150px;}
+
+.themetourlist .titletop{background: url(../img/themetour/themetourtitleico.png) no-repeat center top;margin: 70px 0;}
+
+.themetourlist .titletop p{text-align: center;font-size: 44px;color: #6b6b6b;padding-top: 90px;}
+
+
+.themetourlist .themetourbox{width: 100%;padding: 0; margin: 0;}
+.themetourlist .themetourbox .themetourli{margin: 15px 0 0 0; padding: 0;}
+
+
+.themetourlist .themetourbox .themetourli a{display: block;width: 100%;overflow: hidden;}
+.themetourlist .themetourbox .themetourli a img{width: 100%;}

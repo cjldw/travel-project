@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+		<title>{dede:global.cfg_webname/}</title>
+		<meta name="description" content="{dede:global.cfg_description/}" />
+		<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+		<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+		<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+		<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />-->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/style768.css" />
+	</head>
+
+	<body>
+		<!--网站头部 Begin-->
+		<nav class="navbar headertop">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+					<a class="navbar-brand" href="#"><img src="/img/public/footerlofoimg.png" /></a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav headerlink">
+						{dede:include filename="travel_nav.htm"/}
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right topright">
+						<li class="topsearch">
+							<img src="/img/public/headersearchiico.png" class="searchico" />
+							<span class="searchline1"></span>
+							<input type="text" name="txtsearch" id="txtsearch" class="txtsearch" placeholder="请输入目的地" />
+							<span class="searchline2"></span>
+							<a href="#" class="searchbtn"><img src="/img/public/headersearchibtn.png" /></a>
+						</li>
+						<li class="topbottom">
+							<a href="#">登录</a>
+							<span>/</span>
+							<a href="#">注册</a>
+							<a href="#">在线客服</a>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<!--网站头部 End-->
+		<!--网站Banner Begin-->
+		<div class="container-fluid indexbanner">
+			<div class="swiper-container swiperbanner">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
+					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
+					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
+					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
+				</div>
+
+				<div class="swiper-button-next bannernextbtn"></div>
+				<div class="swiper-button-prev bannerprevbtn"></div>
+			</div>
+		</div>
+		<!--网站Banner End-->
+
+		<!--网站导航 Begin-->
+		<nav class="navbar navbar-myheader">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navlink">
+						{dede:include filename="travel_nav.htm"/}
+					</ul>
+
+					<ul class="nav navbar-nav navbar-right navrightimg">
+						<li>
+							<a href="#"><img src="/img/index/logoico1.png" /></a>
+						</li>
+						<li>
+							<a href="#"><img src="/img/ico/nextico1.png" /></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+		</nav>
+		<!--网站导航 End-->
+
+		<!--特别推荐 Begin-->
+		<div class="container-fluid indexrec">
+			<div class="indexrectop">
+				<p>特别推荐</p>
+				<span></span>
+			</div>
+
+			<div class="indexrecbox">
+				<div class="swiper-container indexrecswiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#"><img src="/img/temporary/indexrecimg1.jpg" />
+								<div class="recswipertext">
+									<p class="name">飞跃东非 窥探生灵的密码</p>
+									<div class="remark">
+										<p>提到动物大迁徙，想到的就是东非这片土地。每年，大量的动物，从南部的塞伦盖蒂穿越马拉河来到马赛马拉，在这里生活两个月左右再不辞辛苦追寻青草返回塞伦盖蒂。这就是震撼的动物大迁徙，广阔的草原上，从容前行的象群，成百上千的角马和斑马，每年都严格按照大自然的规律而迁徙着，追寻食物。狮子和豹子则匍匐于草丛中，伺机发起致命一击。原始的气息，近距离了观察动物们的生命密码，一切都变得紧张而激动起来。</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="/img/temporary/indexrecimg2.jpg" />
+								<div class="recswipertext">
+									<p class="name">恩戈罗恩戈罗 世外桃源般的空灵</p>
+									<div class="remark">
+										<p>恩戈罗恩戈罗这片保护区最主要的景点就是恩戈罗恩戈罗火山口，形成于史前时代的一次火山喷发。如今这片广袤的土地成了大量野生动物们的栖息地。在火山保护区有乌杜图（Ndutu）和马赛克（Masek）两个湖泊，它们是这个保护区里野生动物们的天然饮水池。在这里，你能看到许多的大型哺乳动物，例如，黑犀牛、河马、牛羚、大象、狮子和水牛等。</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="/img/temporary/indexrecimg3.jpg" />
+								<div class="recswipertext">
+									<p class="name">曼雅拉湖 坦桑尼亚的缩影</p>
+									<div class="remark">
+										<p>在600米深东非大裂谷铁锈色和金光色的悬崖底部延伸50公里的曼雅拉湖是一颗宝石。这里如同恩戈罗恩戈罗一样，可以密集地观看动物，这里也堪称坦桑尼亚人野生动物园的微缩景观。曼雅拉湖是坦桑尼亚国家公园中一个最多样化的地方。占地仅325平方公里却融合了裂谷湖、密林和陡峭的山坡。此外，这里也是观鸟天堂，有着超过380中鸟类，特别是水禽和候鸟，湖岸边的树林经常可以看到豹子出没，狮子也常在草地狩猎并表演出名的爬树技巧。</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="/img/temporary/indexrecimg4.jpg" />
+								<div class="recswipertext">
+									<p class="name">塞伦盖蒂 壮美的动物史诗</p>
+									<div class="remark">
+										<p>塞伦盖蒂，毫无疑问是非洲大陆上风景最为宏伟的地方，这里自然景观壮美异常，大型野生动物悠然生活、无拘无束。她有着大地奉献给人类最大规模的动物群落和闻名世界的非洲五霸大兽，还有300多种鸟类，构成了世界最大的动物自然生态系统。从一望无际的平原，到紫色的群山，到水汽蒸腾的河岸，再到巨大的花岗岩堡垒，所到之处，一派纯粹的非洲景象。</p>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="/img/temporary/indexrecimg3.jpg" />
+								<div class="recswipertext">
+									<p class="name">马赛马拉 非洲的瑰宝</p>
+									<div class="remark">
+										<p>马赛马拉是非洲的瑰宝，有着最壮观的野生动物种类和数量。开阔的草原、林地、树木和河流组成了完整的生态系统，创造了惊人美丽的风景。每年七八月份，马赛马拉聚集了各种野生动物，角马、斑马、狮子、猎豹和花豹等。可以说，这段时间，整个东非草原上的动物，都聚集在此。与之相随的，则是各种动物繁衍场景、猎杀场景、交配场景……这也是除了动物迁徙之外最惊心动魄的场景。</p>
+									</div>
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="swiper-button-next recnextbtn"></div>
+				<div class="swiper-button-prev recprevbtn"></div>
+			</div>
+
+			<div class="recmore">
+				<a href="#"></a>
+			</div>
+
+		</div>
+
+		<!--特别推荐 End-->
+
+		<!--主题游 Begin-->
+
+		<div class="themebody">
+			<div class="container-fluid">
+
+				<div class="themetop">
+					<p>主 题 游</p>
+					<span></span>
+				</div>
+
+				<div class="themelist">
+					<div class="themelisttop">
+						<span>婚 拍</span>
+						<a href="#">
+							<p>更 多</p>
+						</a>
+					</div>
+
+					<div class="row themebox">
+
+						<div class="col-xs-12 col-sm-6 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-8 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm- col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="themelist">
+					<div class="themelisttop">
+						<span>婚 拍</span>
+						<a href="#">
+							<p>更 多</p>
+						</a>
+					</div>
+
+					<div class="row themebox">
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg1.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg2.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg3.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg5.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="themelist">
+					<div class="themelisttop">
+						<span>婚 拍</span>
+						<a href="#">
+							<p>更 多</p>
+						</a>
+					</div>
+
+					<div class="row themebox">
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg1.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg2.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg3.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg5.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="themelist">
+					<div class="themelisttop">
+						<span>婚 拍</span>
+						<a href="#">
+							<p>更 多</p>
+						</a>
+					</div>
+
+					<div class="row themebox">
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg1.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg2.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg3.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg5.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="themelist">
+					<div class="themelisttop">
+						<span>婚 拍</span>
+						<a href="#">
+							<p>更 多</p>
+						</a>
+					</div>
+
+					<div class="row themebox">
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg1.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg2.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg3.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg4.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
+							<a href="#">
+								<img src="/img/temporary/themeweddingimg5.jpg" />
+								<div class="detail">
+									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
+
+								</div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!--主题游 End-->
+
+		<!--资讯和登录 Begin-->
+		<div class="newslogin ">
+
+			<div class="container">
+
+				<div class="row">
+
+					<!--资讯 Begin-->
+
+					<div class="newsbody col-xs-12 col-sm-6 col-md-6">
+
+						<p class="title">最新资讯</p>
+
+						<div class="media">
+							<div class="media-body ">
+								<h1 class="media-heading">旅行资讯</h1>
+								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
+							</div>
+
+							<div class="media-middle media-left media-img">
+								<a href="#">
+									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
+								</a>
+							</div>
+
+						</div>
+						<div class="media">
+							<div class="media-body ">
+								<h1 class="media-heading">旅行资讯</h1>
+								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
+							</div>
+
+							<div class="media-middle media-left media-img">
+								<a href="#">
+									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
+								</a>
+							</div>
+
+						</div>
+						<div class="media">
+							<div class="media-body ">
+								<h1 class="media-heading">旅行资讯</h1>
+								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
+							</div>
+
+							<div class="media-middle media-left media-img">
+								<a href="#">
+									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
+								</a>
+							</div>
+
+						</div>
+						<div class="media">
+							<div class="media-body ">
+								<h1 class="media-heading">旅行资讯</h1>
+								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
+							</div>
+
+							<div class="media-middle media-left media-img">
+								<a href="#">
+									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
+								</a>
+							</div>
+
+						</div>
+						<div class="media">
+							<div class="media-body ">
+								<h1 class="media-heading">旅行资讯</h1>
+								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
+							</div>
+
+							<div class="media-middle media-left media-img">
+								<a href="#">
+									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
+								</a>
+							</div>
+
+						</div>
+
+						<a href="#" class="newsmore pull-right">
+							<p>更多资讯</p>
+						</a>
+
+					</div>
+					<!--资讯 end-->
+					<div class="indexlogin col-xs-12 col-sm-6 col-md-6">
+
+						<div class="indexloginbox pull-right">
+
+							<p class="title">快速登录</p>
+
+							<div class="loginform">
+
+								<div class="form-group">
+									<label for="txtAccount">帐号:</label>
+									<input type="email" class="form-control" id="txtAccount" placeholder="手机号/邮箱">
+								</div>
+								<div class="form-group">
+									<label for="txtPass">密码：</label>
+									<input type="password" class="form-control" id="txtPass" placeholder="请输入密码">
+								</div>
+
+								<button type="submit" class="btn pull-right">登录</button>
+
+								<div class="link">
+									<a href="#">忘记密码</a>
+									<a href="">免费注册</a>
+								</div>
+
+							</div>
+
+							<div class="share">
+
+								<a href="#">
+									<p>QQ登录</p>
+								</a>
+								<a href="#">
+									<p>微信登录</p>
+								</a>
+								<a href="#">
+									<p>微博登录</p>
+								</a>
+							</div>
+
+							<div class="wechatimg">
+								<img src="/img/index/wechatimg.png" />
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<!--资讯和登录 End-->
+
+		<!--底部 Begin-->
+		<div class="footer">
+
+			<div class="container">
+
+				<div class="footertop">
+					<img src="/img/public/footerlofoimg.png" />
+					<p><span>全球体验式旅行精品</span> <span>精准定位 / 想哪去哪</span></p>
+				</div>
+
+				<ul class="footerlist">
+					<li><img src="/img/public/footerwechatimg.jpg" /></li>
+					<li class="footerbox">
+						<p>联系我们</p>
+						<a href="#">境外游：021-88888888</a>
+						<a href="#">境内游：021-66666666</a>
+					</li>
+					<li class="footerbox">
+						<p>关于我们</p>
+						<a href="#">关于旅行坐标</a>
+						<a href="#">团队介绍</a>
+						<a href="#">工作机会</a>
+					</li>
+					<li class="footerbox">
+						<p>技术支持</p>
+						<a href="#">合作伙伴</a>
+						<a href="#">联系我们</a>
+						<a href="#">服务条款</a>
+						<a href="#">隐私政策</a>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+		<!--底部 End-->
+
+		<!--版权 Begin-->
+		<div class="copyright">
+			<p>Copyright 旅行坐标 2017-2023 | 京ICP备 888888号 | 京ICP证666666 |
+				<a href="#">网站地图</a> ｜ </p>
+			<p><img src="/img/public/copyrightlogoico.png" /></p>
+			<p>旅行坐标 | Travel On Line</p>
+		</div>
+		<!--版权 End-->
+
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="js/swiper.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+	</body>
+
+</html>
