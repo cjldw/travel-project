@@ -21,46 +21,7 @@
 
 	<body>
 		<!--网站头部 Begin-->
-		<nav class="navbar headertop">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				        <span class="sr-only">Toggle navigation</span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				        <span class="icon-bar"></span>
-				      </button>
-					<a class="navbar-brand" href="#"><img src="/img/public/footerlofoimg.png" /></a>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav headerlink">
-						{dede:include filename="travel_nav.htm"/}
-					</ul>
-
-					<ul class="nav navbar-nav navbar-right topright">
-						<li class="topsearch">
-							<img src="/img/public/headersearchiico.png" class="searchico" />
-							<span class="searchline1"></span>
-							<input type="text" name="txtsearch" id="txtsearch" class="txtsearch" placeholder="请输入目的地" />
-							<span class="searchline2"></span>
-							<a href="#" class="searchbtn"><img src="/img/public/headersearchibtn.png" /></a>
-						</li>
-						<li class="topbottom">
-							<a href="#">登录</a>
-							<span>/</span>
-							<a href="#">注册</a>
-							<a href="#">在线客服</a>
-						</li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container-fluid -->
-		</nav>
-
+		{dede:include filename="travel_header.htm"/}
 		<!--网站头部 End-->
 		<!--网站Banner Begin-->
 		<div class="container-fluid indexbanner">
@@ -122,6 +83,7 @@
 			<div class="indexrecbox">
 				<div class="swiper-container indexrecswiper">
 					<div class="swiper-wrapper">
+                        <!--
 						<div class="swiper-slide">
 							<a href="#"><img src="/img/temporary/indexrecimg1.jpg" />
 								<div class="recswipertext">
@@ -162,17 +124,19 @@
 								</div>
 							</a>
 						</div>
+						-->
+						{dede:arclist flag='p' row='6' orderby='pubdate'}
 						<div class="swiper-slide">
-							<a href="#"><img src="/img/temporary/indexrecimg3.jpg" />
+							<a href="[field:arcurl/]"><img src="[field:picname/]" />
 								<div class="recswipertext">
-									<p class="name">马赛马拉 非洲的瑰宝</p>
+									<p class="name">[field:title/]</p>
 									<div class="remark">
-										<p>马赛马拉是非洲的瑰宝，有着最壮观的野生动物种类和数量。开阔的草原、林地、树木和河流组成了完整的生态系统，创造了惊人美丽的风景。每年七八月份，马赛马拉聚集了各种野生动物，角马、斑马、狮子、猎豹和花豹等。可以说，这段时间，整个东非草原上的动物，都聚集在此。与之相随的，则是各种动物繁衍场景、猎杀场景、交配场景……这也是除了动物迁徙之外最惊心动魄的场景。</p>
+										<p>[field:description/]</p>
 									</div>
 								</div>
 							</a>
 						</div>
-
+						{/dede:arclist}
 					</div>
 
 				</div>

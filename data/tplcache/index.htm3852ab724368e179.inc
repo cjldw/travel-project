@@ -17,11 +17,16 @@ $z[4][4]['name']="cfg_mobileurl";
 $z[5]=Array("global","",1034,1062);
 $z[5][4]=array();
 $z[5][4]['name']="cfg_mobileurl";
-$z[6]=Array("include","",2593,2634);
+$z[6]=Array("include","",1757,1801);
 $z[6][4]=array();
-$z[6][4]['filename']="travel_nav.htm";
-$z[7]=Array("include","",4703,4744);
+$z[6][4]['filename']="travel_header.htm";
+$z[7]=Array("include","",3123,3164);
 $z[7][4]=array();
 $z[7][4]['filename']="travel_nav.htm";
+$z[8]=Array("arclist","\r\n						<div class=\"swiper-slide\">\r\n							<a href=\"[field:arcurl/]\"><img src=\"[field:picname/]\" />\r\n								<div class=\"recswipertext\">\r\n									<p class=\"name\">[field:title/]</p>\r\n									<div class=\"remark\">\r\n										<p>[field:description/]</p>\r\n									</div>\r\n								</div>\r\n							</a>\r\n						</div>\r\n						",7179,7562);
+$z[8][4]=array();
+$z[8][4]['flag']="p";
+$z[8][4]['row']="6";
+$z[8][4]['orderby']="pubdate";
 
 ?>
