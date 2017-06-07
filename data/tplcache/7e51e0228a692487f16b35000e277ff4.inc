@@ -1,1 +1,0 @@
-<li><span class="date">[field:pubdate function="GetDateMK(@me)"/]</span><a href="[field:arcurl /]">[field:title /]</a></li>
