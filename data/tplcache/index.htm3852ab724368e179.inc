@@ -1,32 +1,20 @@
 <?php
-$z[0]=Array("global","",248,276);
+$z[0]=Array("include","",0,41);
 $z[0][4]=array();
-$z[0][4]['name']="cfg_soft_lang";
-$z[1]=Array("global","",291,317);
+$z[0][4]['filename']="travel_top.htm";
+$z[1]=Array("include","",83,127);
 $z[1][4]=array();
-$z[1][4]['name']="cfg_webname";
-$z[2]=Array("global","",363,393);
+$z[1][4]['filename']="travel_header.htm";
+$z[2]=Array("include","",1449,1490);
 $z[2][4]=array();
-$z[2][4]['name']="cfg_description";
-$z[3]=Array("global","",432,459);
+$z[2][4]['filename']="travel_nav.htm";
+$z[3]=Array("arclist","\r\n						<div class=\"swiper-slide\">\r\n							<a href=\"[field:arcurl/]\"><img src=\"[field:picname/]\" />\r\n								<div class=\"recswipertext\">\r\n									<p class=\"name\">[field:title/]</p>\r\n									<div class=\"remark\">\r\n										<p>[field:description/]</p>\r\n									</div>\r\n								</div>\r\n							</a>\r\n						</div>\r\n						",5505,5888);
 $z[3][4]=array();
-$z[3][4]['name']="cfg_keywords";
-$z[4]=Array("global","",525,553);
+$z[3][4]['flag']="p";
+$z[3][4]['row']="6";
+$z[3][4]['orderby']="pubdate";
+$z[4]=Array("include","",21612,21656);
 $z[4][4]=array();
-$z[4][4]['name']="cfg_mobileurl";
-$z[5]=Array("global","",1034,1062);
-$z[5][4]=array();
-$z[5][4]['name']="cfg_mobileurl";
-$z[6]=Array("include","",1757,1801);
-$z[6][4]=array();
-$z[6][4]['filename']="travel_header.htm";
-$z[7]=Array("include","",3123,3164);
-$z[7][4]=array();
-$z[7][4]['filename']="travel_nav.htm";
-$z[8]=Array("arclist","\r\n						<div class=\"swiper-slide\">\r\n							<a href=\"[field:arcurl/]\"><img src=\"[field:picname/]\" />\r\n								<div class=\"recswipertext\">\r\n									<p class=\"name\">[field:title/]</p>\r\n									<div class=\"remark\">\r\n										<p>[field:description/]</p>\r\n									</div>\r\n								</div>\r\n							</a>\r\n						</div>\r\n						",7179,7562);
-$z[8][4]=array();
-$z[8][4]['flag']="p";
-$z[8][4]['row']="6";
-$z[8][4]['orderby']="pubdate";
+$z[4][4]['filename']="travel_bottom.htm";
 
 ?>

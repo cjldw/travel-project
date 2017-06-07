@@ -1,0 +1,45 @@
+{dede:include filename="travel_top.htm"/}
+<link rel="stylesheet" type="text/css" href="/css/usercenter.css" />
+<body>
+{dede:include filename="travel_header.htm"/}
+<!--网站导航 Begin-->
+{dede:include filename="travel_nav.htm"/}
+<!--网站导航 End-->
+
+<div class="container-fluid companybody">
+
+    <div class="companybox">
+        <div class="leftmenu js-usercenter">
+            <a href="#"  class="active">个人中心</a>
+            <a href="#">签证查询</a>
+            <a href="#">我的预定</a>
+            <a href="#">我的咨询</a>
+            <a href="#">我想去</a>
+        </div>
+        <div class="item-info">
+            <img  class="item-info-img" src="/img/usercenter/location.jpg" />
+            <h3>我的心愿单</h3>
+            <div class="rightcontent">
+                <img class="item-info-img" src="/img/usercenter/wants.jpg" />
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--底部 Begin-->
+{dede:include filename="travel_bottom.htm"/}
+<script>
+    (function () {
+        "use strict"
+        var E_usercenter = $(".js-usercenter > a")
+        var E_usercenter_content = $(".js-usercenter-content > .rightcontent");
+        E_usercenter.on("click", function (e) {
+            e.preventDefault();
+            var that = $(this)
+            that.addClass("active").siblings("a").removeClass("active");
+        });
+
+    })();
+</script>
+</body>
+</html>

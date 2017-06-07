@@ -1,0 +1,56 @@
+html,body{height: 100%;background:url(../img/company/companybg.jpg) repeat center center; ;}
+
+.companybody{width: 100%;}
+
+.companybox{width: 1000px;margin: 30px auto;}
+.companybox .leftmenu{width: 250px;float: left;}
+.companybox .leftmenu a{display: block;width: 100%;height: 100px;border-bottom: solid 1px #e0f1ee;text-align: center;line-height: 100px;color: #13b5b1;font-size: 20px;background-color: #FFFFFF;text-decoration: none;}
+
+.companybox .leftmenu a.active{background-color: #eb6877;color: #FFFFFF;}
+
+
+.companybox .rightcontent{float: right;width: 710px; overflow: hidden; background-color: #FFFFFF;margin-bottom: 100px;padding: 30px 60px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+.companybox .rightcontent p.title{font-size: 25px;color: #EB6877;line-height: 45px;}
+.companybox .item-info {float: right;}
+.companybox .item-info .item-info-img{float: right; width: 710px;}
+.companybox .item-info h3{ margin-top: 260px; }
+.conpanycontent{width: 100%;display: table;border: solid 2px #EB6877;padding: 10px 20px;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;margin-bottom: 50px;}
+
+
+.conpanycontent .aboutus{width: 100%;display: table;}
+.conpanycontent .aboutus p{font-size: 16px;color: #595757;line-height: 2.2;}
+
+.conpanycontent .aboutus p:nth-child(1){font-size: 24px;}
+
+.conpanycontent .cooperative{width: 100%;display: table;margin-top: 50px;}
+
+.conpanycontent .cooperative p:nth-child(1){font-size: 24px;color: #595757;line-height: 2.2;}
+.conpanycontent .cooperative .cooperativebox{width: 100%;display: table;margin-bottom:30px;}
+
+.conpanycontent .cooperative .cooperativebox a{display: block;float: left; width: 32%; height: 100px;position: relative;height: 100px;border: solid 1px #eb6877;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;margin-bottom: 10px;}
+.conpanycontent .cooperative .cooperativebox a img{display: block;position: absolute;left: 0;top: 0;right: 0;bottom: 0;margin: auto;max-height: 70%;max-width: 80%;}
+.conpanycontent .cooperative .cooperativebox a:nth-child(3n+2){margin: 0 2%;}
+
+
+.teamcontent{width: 100%;display: block;}
+.teamcontent a{display: block; width: 48%;height: 172px;position: relative;text-align: center;margin-top: 30px;margin-bottom: 30px;}
+.teamcontent a:nth-child(2n+1){float: left;}
+.teamcontent a:nth-child(2n){float: right;}
+
+.teamcontent a img{display: inline-block;max-width: 100%;max-height: 100%;}
+.teamcontent a p{position: absolute;text-align: right;color: #595757;font-size: 20px;bottom: 0;right: 0;margin-bottom: 0;}
+.teamcontent a p span{padding-left: 5px;font-size: 14px;}
+
+
+
+
+.recruit a{display: block;font-size: 20px;line-height: 30px; width: 100%; color: #595757;text-decoration: none;margin-top: 10px;}
+.recruit a span:nth-child(2){padding: 0 10px; color: #DEDEDE;}
+
+.recruit a:hover{color: #eb6877;}
+.recruitremark {width: 100%;display: table;margin-top: 50px;margin-bottom: 100px;}
+.recruitremark p{color: #595757;font-size: 20px;line-height: 2.2;}
+.recruitremark p:nth-child(1){color: #eb6788;font-size: 24px;}
+
+.contact{width: 100%;display: table;}
+.contact p{font-size: 20px;color: #595757;line-height: 1.5;}
