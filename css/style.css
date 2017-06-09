@@ -9,7 +9,7 @@ body{font-family: "微软雅黑","microsoft yahei",arial;}
 .headertop .headerlink{display: none;}
 .headertop .topright{display: table; height: 100%;}
 .headertop .topright li{display: block;clear: both;}
-.headertop .topright .topsearch{ width: 350px;height: 34px;background-color: #e5e5e5;border-radius: 5px;margin-top: 18px;}
+.headertop .topright .topsearch{ width: 350px;height: 40px;background-color: #e5e5e5;border-radius: 5px;margin-top: 18px; padding-top: 3px;}
 .headertop .topright .topsearch .searchico{display: block;float: left; margin-top: 4px;margin-left: 10px;}
 .headertop .topright .topsearch .searchline1{display: block;float: left;width: 1px;height: 24px;margin: 5px;background-color: #339e94;}
 .headertop .topright .topsearch .txtsearch{display: block;float: left; width: 250px;appearance: none;-webkit-appearance: none;-moz-appearance: none;height: 34px;border: none;background:rgba(255,255,255,0);margin: 0 5px;font-size: 16px;color: #a4a4a4;outline: none;}
