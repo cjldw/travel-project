@@ -1,0 +1,115 @@
+{dede:include filename="travel_top.htm"/}
+<link rel="stylesheet" type="text/css" href="/css/news.css" />
+<body>
+{dede:include filename="travel_header.htm"/}
+<!--网站导航 Begin-->
+{dede:include filename="travel_nav.htm"/}
+<!--网站导航 End-->
+
+<div class="container-fluid news">
+	<img src="/img/themetour/themetourbannerimg.jpg"/>
+</div>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 logo">
+			<img src="/img/news/hotnews.jpg" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="titletop">
+			<p>热门文章</p>
+		</div>
+	</div>
+	<div class="row news-recommand">
+		<div class="recommend">
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="news-list">
+		<div class="news-more">
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommendwhite.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+
+			<div class="box">
+				<img src="/img/news/recommendwhite.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+		</div>
+		<div class="news-more">
+			<div class="box">
+				<img src="/img/news/recommendwhite.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommendwhite.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommend.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+			<div class="box">
+				<img src="/img/news/recommendwhite.jpg" />
+				<h5> 旅游坐标 </h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--底部 Begin-->
+		<!--底部 Begin-->
+		{dede:include filename="travel_bottom.htm"/}
+		<script>
+			(function () {
+			    "use strict"
+				var E_aboutus = $(".js-aboutus > a")
+                var E_aboutus_content = $(".js-aboutus-content > .rightcontent");
+				E_aboutus.on("click", function (e) {
+				    e.preventDefault();
+				    var that = $(this)
+                    var V_index = that.index();
+					that.addClass("active").siblings("a").removeClass("active");
+				    E_aboutus_content.eq(V_index).removeClass("hide").siblings(".rightcontent").addClass("hide");
+                });
+
+            })();
+		</script>
+
+	</body>
+
+
+</html>
