@@ -18,8 +18,6 @@
 }
 
 .indexbanner .swiper-container .swiper-slide img {
-	width: 307px;
-	height: 413px;
 	display: inline-block;
 	width: 100%;
 }
@@ -97,6 +95,8 @@
 }
 
 .indexrecswiper .swiper-slide a>img {
+	width: 307px;
+	height: 413px;
 	display: block;
 	width: 100%;
 }
