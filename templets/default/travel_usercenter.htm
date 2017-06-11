@@ -8,21 +8,72 @@
 
 <div class="container-fluid companybody">
 
-    <div class="companybox">
-        <div class="leftmenu js-usercenter">
+    <div class="companybox js-usercenter-box">
+        <div class="leftmenu js-usercenter-menu">
             <a href="#"  class="active">个人中心</a>
+            <a href="#">编辑个人信息</a>
             <a href="#">签证查询</a>
             <a href="#">我的预定</a>
             <a href="#">我的咨询</a>
             <a href="#">我想去</a>
         </div>
-        <div class="item-info">
+
+        <div class="item-info show">
             <img  class="item-info-img" src="/img/usercenter/location.jpg" />
             <h3>我的心愿单</h3>
             <div class="rightcontent">
                 <img class="item-info-img" src="/img/usercenter/wants.jpg" />
             </div>
         </div>
+
+        <div class="item-info">
+            <div class="edituserinfo">
+                <img src="/img/usercenter/edituserinfo.jpg" />
+            </div>
+        </div>
+
+        <div class="item-info">
+            <div class="ca">
+                <input class="ipt" type="text" placeholder="请输入证件号">
+                <button type="button" class="search">查 询</button>
+            </div>
+        </div>
+
+        <div class="item-info">
+            <div class="order">
+                <table class="table">
+                    <tr>
+                        <td class="title">套餐活动：</td>
+                        <td class="content">巴厘岛婚拍888元套餐游</td>
+                    </tr>
+                    <tr>
+                        <td class="title">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                        <td class="content">XXX先生</td>
+                    </tr>
+                    <tr>
+                        <td class="title">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间：</td>
+                        <td class="content">2017年2月14日</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="item-info">
+            <div class="qa">
+                <h6>Q：巴厘岛婚拍套餐有那些</h6>
+                <p>A： 您好, 最新婚拍优惠活动参考网站婚拍主题或关注旅行坐标微信公众号回复相关问题, 我们会第一时间给您答复。
+            </div>
+        </div>
+
+        <div class="item-info">
+            <div class="whereuwantgo">
+                <input class="ipt" type="text" placeholder="法国巴黎">
+                <img src="/img/usercenter/whereuwantgo.jpg" />
+                <a class="go" href="#">想去就去 精确定位</a>
+            </div>
+        </div>
+
+
     </div>
 
 </div>
@@ -30,13 +81,15 @@
 {dede:include filename="travel_bottom.htm"/}
 <script>
     (function () {
-        "use strict"
-        var E_usercenter = $(".js-usercenter > a")
-        var E_usercenter_content = $(".js-usercenter-content > .rightcontent");
+        "use strict";
+        var E_usercenter = $(".js-usercenter-menu > a");
+        var E_usercenter_content = $(".js-usercenter-box > .item-info");
         E_usercenter.on("click", function (e) {
             e.preventDefault();
-            var that = $(this)
+            var that = $(this);
+            var index = that.index();
             that.addClass("active").siblings("a").removeClass("active");
+            E_usercenter_content.eq(index).addClass("show").siblings(".item-info").removeClass(".show");
         });
 
     })();
