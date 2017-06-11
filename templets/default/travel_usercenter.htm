@@ -8,7 +8,7 @@
 
 <div class="container-fluid companybody">
 
-    <div class="companybox js-usercenter-box">
+    <div class="companybox js-usercenter">
         <div class="leftmenu js-usercenter-menu">
             <a href="#"  class="active">个人中心</a>
             <a href="#">编辑个人信息</a>
@@ -83,13 +83,13 @@
     (function () {
         "use strict";
         var E_usercenter = $(".js-usercenter-menu > a");
-        var E_usercenter_content = $(".js-usercenter-box > .item-info");
+        var E_usercenter_content = $(".js-usercenter > .item-info");
         E_usercenter.on("click", function (e) {
             e.preventDefault();
             var that = $(this);
             var index = that.index();
             that.addClass("active").siblings("a").removeClass("active");
-            E_usercenter_content.eq(index).addClass("show").siblings(".item-info").removeClass(".show");
+            E_usercenter_content.eq(index).addClass("show").siblings(".item-info").removeClass("show");
         });
 
     })();
