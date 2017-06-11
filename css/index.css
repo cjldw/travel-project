@@ -95,8 +95,6 @@
 }
 
 .indexrecswiper .swiper-slide a>img {
-	width: 307px;
-	height: 413px;
 	display: block;
 	width: 100%;
 }
@@ -240,6 +238,7 @@
 	display: table;
 	margin-top: 60px;
 }
+
 .themebody .themelist img {
     width: 100%;
 }
