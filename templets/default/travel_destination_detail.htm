@@ -1,13 +1,70 @@
 {dede:include filename="travel_top.htm"/}
+<link rel="stylesheet" type="text/css" href="/css/product.css" />
 <body>
 <!--网站头部 Begin-->
 {dede:include filename="travel_header.htm"/}
 {dede:include filename="travel_nav.htm"/}
-<div class="container">
-    <div class="content">
-        　{dede:field.body/}
+
+
+<!-- body -->
+<div class="container product-preview">
+    <div class="left">
+        <img class="item-big-preview" src="/img/products/bigpreview.jpg" />
+        <div class="item-gallery">
+            <img class="item-small-preview" src="/img/products/bigpreview.jpg" />
+            <img class="item-small-preview" src="/img/products/bigpreview.jpg" />
+            <img class="item-small-preview" src="/img/products/bigpreview.jpg" />
+        </div>
+    </div>
+    <div class="right">
+        <div class="item-information">
+            <h1>6天4晚蜜月天堂之旅</h1>
+            <p class="title-more">巴厘岛阿雅娜度假酒店</p>
+            <div class="item-price">价格: <span class="item-price-truly">计算中</span></div>
+            <div class="item-desc">
+                <p>
+                    <img class="join" src="/img/products/join.jpg" />
+                    这阿拉斯加的一个我经的一万个, 斯蒂呵呆久了了哦据了解熬夜垃圾第三方斯蒂芬为哦i叫你呢了解莎拉蒂夫接撒的浪费
+                    这阿拉斯加的一个我经的一万个, 斯蒂呵呆久了了哦据了解熬夜垃圾第三方斯蒂芬为哦i叫你呢了解莎拉蒂夫接撒的浪费
+                    这阿拉斯加的一个我经的一万个, 斯蒂呵呆久了了哦据了解熬夜垃圾第三方斯蒂芬为哦i叫你呢了解莎拉蒂夫接撒的浪费
+                    这阿拉斯加的一个我经的一万个, 斯蒂呵呆久了了哦据了解熬夜垃圾第三方斯蒂芬为哦i叫你呢了解莎拉蒂夫接撒的浪费
+                </p>
+            </div>
+        </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="product-detail-infomation">
+        <div class="product-intro">
+            <ul class="infomation-tab">
+                <li><a href="#content">套餐内容</a></li>
+                <li><span></span><a href="#special">套餐特色</a></li>
+                <li><span></span><a href="#schedular">行程安排</a></li>
+            </ul>
+            <div class="product-content">
+                {dede:field.body/}
+            </div>
+        </div>
+        <div class="product-map">
+            <div class="map-box">
+                <img src="/img/products/map.jpg" />
+                <a href="#">查看地图</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="share">
+    <h4>分享</h4>
+    <ul>
+        <li class="wx"><a href="#"></a></li>
+        <li class="wb"><a href="#"></a></li>
+        <li class="qzone"><a href="#"></a></li>
+    </ul>
+</div>
+<!--底部 Begin-->
 {dede:include filename="travel_bottom.htm"/}
 </body>
 </html>
+
