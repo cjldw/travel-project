@@ -91,7 +91,9 @@ if ( ! function_exists('AdminUpload'))
             }
         }
         $fileurl = $filedir.'/'.$filename.'.'.$file_sname;
-        $rs = move_uploaded_file($file_tmp, $cfg_basedir.$fileurl);
+        $absolutePath = $cfg_basedir.$fileurl;
+        @mkdir(dirname($absolutePath), 0777, true);
+        $rs = move_uploaded_file($file_tmp, $absolutePath);
         if(!$rs) return -2;
         if($ftype=='image' && $watermark)
         {
