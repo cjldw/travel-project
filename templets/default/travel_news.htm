@@ -25,34 +25,34 @@
 
 	<div class="row news-recommand">
 		<div class="recommend">
-			{dede:arclist flag='h' row='6' orderby='pubdate' channelid=6}
+
+			{dede:channelartlist row=6}
+			{dede:arclist titlelen='42' row='6' orderby='pubdate' limit='1,6'}
 			<div class="box" onclick="window.location.href=[field:arcurl/]">
 				<img src="[field:picname/]" />
 				<h5> [field:title/] </h5>
 			</div>
 			{/dede:arclist}
+			{/dede:channelartlist}
 		</div>
 	</div>
 </div>
 
+
+
+
+
 <div class="container">
 	<div class="news-list">
 		<div class="news-more">
-			{dede:arclist  row='6' orderby='pubdate' limit='1,6' channelid='16'}
+			{dede:channelartlist row=6}
+			{dede:arclist titlelen='42' row='6' orderby='pubdate' limit='6,12'}
 			<div class="box" onclick="window.location.href=[field:arcurl/]">
 				<img src="[field:picname/]" />
 				<h5> [field:title/] </h5>
 			</div>
 			{/dede:arclist}
-		</div>
-		<div class="news-more">
-			{dede:arclist row='6' orderby='pubdate' limit='6,12' channelid='16'}
-			<div class="box" onclick="window.location.href=[field:arcurl/]">
-				<img src="[field:picname/]" />
-				<h5> [field:title/] </h5>
-			</div>
-			{/dede:arclist}
-
+			{/dede:channelartlist}
 		</div>
 	</div>
 </div>
