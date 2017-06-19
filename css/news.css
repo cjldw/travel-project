@@ -23,7 +23,7 @@ html,body{background-color: #e0f1ee;}
 .news-detail {margin-top: 80px;}
 .news-info {margin-top: 20px;}
 .news-info small {padding: 0 5px;}
-.new-info .description {margin: 20px 0; padding: 10px; border: 3px dashed #ccc; border-radius: 5px; }
+.new-info .description {text-align: left; margin: 20px 0; padding: 10px; border: 3px dashed #ccc; border-radius: 5px; }
 .content { text-align: left;}
 
 
