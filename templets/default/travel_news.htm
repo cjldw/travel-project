@@ -10,6 +10,7 @@
 	<img src="/img/themetour/themetourbannerimg.jpg"/>
 </div>
 
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12 logo">
@@ -21,20 +22,15 @@
 			<p>热门文章</p>
 		</div>
 	</div>
+
 	<div class="row news-recommand">
 		<div class="recommend">
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
+			{dede:arclist flag='h' row='6' orderby='pubdate' channelid=6}
+			<div class="box" onclick="window.location.href=[field:arcurl/]">
+				<img src="[field:picname/]" />
+				<h5> [field:title/] </h5>
 			</div>
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
+			{/dede:arclist}
 		</div>
 	</div>
 </div>
@@ -42,49 +38,21 @@
 <div class="container">
 	<div class="news-list">
 		<div class="news-more">
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
+			{dede:arclist listtype='all' row='6' orderby='pubdate' limit='1,6' channelid='6'}
+			<div class="box" onclick="window.location.href=[field:arcurl/]">
+				<img src="[field:picname/]" />
+				<h5> [field:title/] </h5>
 			</div>
-			<div class="box">
-				<img src="/img/news/recommendwhite.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-
-			<div class="box">
-				<img src="/img/news/recommendwhite.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
+			{/dede:arclist}
 		</div>
 		<div class="news-more">
-			<div class="box">
-				<img src="/img/news/recommendwhite.jpg" />
-				<h5> 旅游坐标 </h5>
+			{dede:arclist listtype='all' row='6' orderby='pubdate' limit='6,12' channelid='6'}
+			<div class="box" onclick="window.location.href=[field:arcurl/]">
+				<img src="[field:picname/]" />
+				<h5> [field:title/] </h5>
 			</div>
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-			<div class="box">
-				<img src="/img/news/recommendwhite.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-			<div class="box">
-				<img src="/img/news/recommend.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
-			<div class="box">
-				<img src="/img/news/recommendwhite.jpg" />
-				<h5> 旅游坐标 </h5>
-			</div>
+			{/dede:arclist}
+
 		</div>
 	</div>
 </div>
