@@ -15,7 +15,7 @@ html,body{background-color: #e0f1ee;}
 .news-more {margin: 0 auto; overflow: hidden;}
 .news-more .box {float: left; width: 220px; position: relative; }
 .news-more .box:hover h5{bottom: 0;}
-.news-more .box img{}
+.news-more .box img{ width:220px; display: block; margin: 0 auto;}
 .news-more .box h5{margin: 0; position: absolute; font-size: 16px; line-height: 80px; bottom: -80px; width: 100%; background: #ccc; height: 80px; padding-left: 10px; box-sizing: border-box; transition: bottom .8s;}
 
 
