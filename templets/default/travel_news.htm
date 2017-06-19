@@ -25,9 +25,8 @@
 
 	<div class="row news-recommand">
 		<div class="recommend">
-
-			{dede:channelartlist row=6}
-			{dede:arclist titlelen='42' row='6' orderby='pubdate' limit='1,6'}
+			{dede:channelartlist row=3}
+			{dede:arclist titlelen='42' row='3' orderby='pubdate' limit='1,3'}
 			<div class="box" onclick="window.location.href=[field:arcurl/]">
 				<img src="[field:picname/]" />
 				<h5> [field:title/] </h5>
@@ -38,15 +37,11 @@
 	</div>
 </div>
 
-
-
-
-
 <div class="container">
 	<div class="news-list">
 		<div class="news-more">
 			{dede:channelartlist row=6}
-			{dede:arclist titlelen='42' row='6' orderby='pubdate' limit='6,12'}
+			{dede:arclist titlelen='42' row='6' orderby='pubdate' limit='3,9'}
 			<div class="box" onclick="window.location.href=[field:arcurl/]">
 				<img src="[field:picname/]" />
 				<h5> [field:title/] </h5>
