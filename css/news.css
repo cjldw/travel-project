@@ -6,7 +6,7 @@ html,body{background-color: #e0f1ee;}
 
 .news-recommand {margin-top: 20px;}
 .news-recommand .recommend {margin: 0 auto; width: 700px;}
-.news-recommand .box { width:220px height: 216px; overflow:hidden; position:relative; float: left; margin-left: 10px;}
+.news-recommand .box { width:220px; height: 216px; overflow:hidden; position:relative; float: left; margin-left: 10px;}
 .news-recommand .box:hover h5{ bottom: 0; }
 .news-recommand .box img{ display: block; margin: 0 auto;}
 .news-recommand .box h5{margin: 0; line-height: 80px; font-size: 16px; width: 100%;height: 80px; position: absolute; bottom: -80px; left: 0; padding-left: 10px; box-sizing: border-box; background: #ccc; transition: bottom .8s}
