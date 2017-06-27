@@ -1,0 +1,18 @@
+
+html,body{background-color: #e0f1ee;}
+
+.activitybanner {width: 100%; padding: 0; margin: 0;}
+
+.activitybanner img{width: 100%;}
+
+.activitylist{padding: 0 5%;margin-bottom: 150px;}
+
+.activitylist .activitybox{width: 100%;padding: 0; margin: 0;}
+.activitylist .activitybox .activityrec{margin: 30px 0 0 0; }
+
+
+.activitylist .activitybox a{display: block;width: 100%;overflow: hidden;}
+.activitylist .activitybox a img{width: 100%;}
+
+.activitylist .activitybox p{display: block;background-color: #ffffff;width: 100%;height: 110px;}
+.activitylist .activitybox p span{line-height: 110px;color: #000000;margin-left: 35px;font-size: 40px;}
