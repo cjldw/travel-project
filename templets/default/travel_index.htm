@@ -7,10 +7,9 @@
 		<div class="container-fluid indexbanner">
 			<div class="swiper-container swiperbanner">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
-					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
-					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
-					<div class="swiper-slide"> <img src="/img/temporary/indexbanner.jpg" /> </div>
+					{dede:loop table='tvl_uploads' sort='' row='4' if='mediatype = 1'}
+                        <div class="swiper-slide"> <img src="[field:url/]" /> </div>
+					{/dede:loop}
 				</div>
 
 				<div class="swiper-button-next bannernextbtn"></div>

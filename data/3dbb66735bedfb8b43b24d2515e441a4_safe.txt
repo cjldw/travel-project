@@ -1,0 +1,12 @@
+127.0.0.1||/||SELECT url from tvl_uploads where mediatype = 1 and title like "首页轮播%" limit 4||unusual character
+127.0.0.1||/||SELECT url from tvl_uploads where mediatype = 1 and title like "首页轮播%" limit 4||unusual character
+127.0.0.1||/||SELECT url from tvl_uploads where mediatype = 1 and title like "首页轮播%" limit 4;||unusual character
+127.0.0.1||/||SELECT url from tvl_uploads where mediatype = 1 and title like "首页轮播%" limit 4;||unusual character
+127.0.0.1||/||SELECT url from `tvl_uploads` where mediatype = 1 and title like "首页轮播%" limit 4;||unusual character
+127.0.0.1||/||SELECT * FROM tvl_uploads  WHERE mediatype = 1 and title like "首页轮播%"   LIMIT 0,4||unusual character
+127.0.0.1||/||SELECT * FROM #@_uploads  WHERE mediatype = 1   LIMIT 0,4||comment detect
+127.0.0.1||/||SELECT * FROM #@_uploads  WHERE mediatype = 1   LIMIT 0,4||comment detect
+127.0.0.1||/||SELECT * FROM #@_uploads  WHERE mediatype = 1   LIMIT 0,4||comment detect
+127.0.0.1||/||SELECT * FROM #@_uploads  WHERE mediatype = 1   LIMIT 0,4||comment detect
+127.0.0.1||/||SELECT * FROM #@_uploads  WHERE mediatype = 1   LIMIT 0,4||comment detect
+127.0.0.1||/||SELECT * FROM #@_uploads  WHERE mediatype = 1   LIMIT 0,4||comment detect
