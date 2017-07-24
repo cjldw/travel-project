@@ -19,8 +19,13 @@ $z[4][4]=array();
 $z[4][4]['flag']="h";
 $z[4][4]['row']="6";
 $z[4][4]['orderby']="pubdate";
-$z[5]=Array("include","",20617,20661);
+$z[5]=Array("sql","",5540,5630);
 $z[5][4]=array();
-$z[5][4]['filename']="travel_bottom.htm";
+$z[5][4]['sql']="<select name=";
+$z[5][4]['select * from tvl_anchor;" id']="";
+$z[5][4]['></select>']="";
+$z[6]=Array("include","",20741,20785);
+$z[6][4]=array();
+$z[6][4]['filename']="travel_bottom.htm";
 
 ?>
