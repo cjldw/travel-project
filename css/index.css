@@ -22,8 +22,8 @@
 	width: 100%;
 }
 .top-recommand {
-    width: 387px;
-	height: 520px;
+    width: 304px;
+	height: 408px;
 }
 .banner-image img {
 	height: 380px;
@@ -305,6 +305,10 @@
 .themebody .col-xs-12.col-sm-6.col-md-4.themeli img {
 	width: 385px;
 	height: 331px;
+}
+.themebody .col-xs-12.col-sm-8.col-md-8.themeli img {
+    width: 789px;
+	height: 333px;
 }
 
 .themebody .themeli .detail {

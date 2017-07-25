@@ -31,48 +31,6 @@
 			<div class="indexrecbox">
 				<div class="swiper-container indexrecswiper">
 					<div class="swiper-wrapper">
-                        <!--
-						<div class="swiper-slide">
-							<a href="#"><img src="/img/temporary/indexrecimg1.jpg" />
-								<div class="recswipertext">
-									<p class="name">飞跃东非 窥探生灵的密码</p>
-									<div class="remark">
-										<p>提到动物大迁徙，想到的就是东非这片土地。每年，大量的动物，从南部的塞伦盖蒂穿越马拉河来到马赛马拉，在这里生活两个月左右再不辞辛苦追寻青草返回塞伦盖蒂。这就是震撼的动物大迁徙，广阔的草原上，从容前行的象群，成百上千的角马和斑马，每年都严格按照大自然的规律而迁徙着，追寻食物。狮子和豹子则匍匐于草丛中，伺机发起致命一击。原始的气息，近距离了观察动物们的生命密码，一切都变得紧张而激动起来。</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#"><img src="/img/temporary/indexrecimg2.jpg" />
-								<div class="recswipertext">
-									<p class="name">恩戈罗恩戈罗 世外桃源般的空灵</p>
-									<div class="remark">
-										<p>恩戈罗恩戈罗这片保护区最主要的景点就是恩戈罗恩戈罗火山口，形成于史前时代的一次火山喷发。如今这片广袤的土地成了大量野生动物们的栖息地。在火山保护区有乌杜图（Ndutu）和马赛克（Masek）两个湖泊，它们是这个保护区里野生动物们的天然饮水池。在这里，你能看到许多的大型哺乳动物，例如，黑犀牛、河马、牛羚、大象、狮子和水牛等。</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#"><img src="/img/temporary/indexrecimg3.jpg" />
-								<div class="recswipertext">
-									<p class="name">曼雅拉湖 坦桑尼亚的缩影</p>
-									<div class="remark">
-										<p>在600米深东非大裂谷铁锈色和金光色的悬崖底部延伸50公里的曼雅拉湖是一颗宝石。这里如同恩戈罗恩戈罗一样，可以密集地观看动物，这里也堪称坦桑尼亚人野生动物园的微缩景观。曼雅拉湖是坦桑尼亚国家公园中一个最多样化的地方。占地仅325平方公里却融合了裂谷湖、密林和陡峭的山坡。此外，这里也是观鸟天堂，有着超过380中鸟类，特别是水禽和候鸟，湖岸边的树林经常可以看到豹子出没，狮子也常在草地狩猎并表演出名的爬树技巧。</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a href="#"><img src="/img/temporary/indexrecimg4.jpg" />
-								<div class="recswipertext">
-									<p class="name">塞伦盖蒂 壮美的动物史诗</p>
-									<div class="remark">
-										<p>塞伦盖蒂，毫无疑问是非洲大陆上风景最为宏伟的地方，这里自然景观壮美异常，大型野生动物悠然生活、无拘无束。她有着大地奉献给人类最大规模的动物群落和闻名世界的非洲五霸大兽，还有300多种鸟类，构成了世界最大的动物自然生态系统。从一望无际的平原，到紫色的群山，到水汽蒸腾的河岸，再到巨大的花岗岩堡垒，所到之处，一派纯粹的非洲景象。</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						-->
 						{dede:arclist flag='h' row='6' orderby='pubdate'}
 						<div class="swiper-slide">
 							<a href="[field:arcurl/]"><img src="[field:picname/]" class="top-recommand" />
@@ -120,7 +78,7 @@
 					</div>
 
 					<div class="row themebox">
-						{dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='3' limit='3' flag='p'}
+						{dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='3' flag='p'}
                         [field:global name='autoindex' runphp='yes']
                             if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
                             else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
@@ -145,7 +103,7 @@
 
 					<div class="row themebox">
                         <div class="row themebox">
-                            {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='15' limit='3' flag='p'}
+                            {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='15' flag='p'}
                             [field:global name='autoindex' runphp='yes']
                             if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
                             else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
@@ -172,7 +130,7 @@
 					</div>
 
 					<div class="row themebox">
-                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='18' limit='3' flag='p'}
+                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='18' flag='p'}
                         [field:global name='autoindex' runphp='yes']
                         if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
                         else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
@@ -198,7 +156,7 @@
 					</div>
 
 					<div class="row themebox">
-                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='16' limit='3' flag='p'}
+                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='16' flag='p'}
                         [field:global name='autoindex' runphp='yes']
                         if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
                         else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
@@ -225,7 +183,7 @@
 
 					<div class="row themebox">
 
-                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='17' limit='3' flag='p'}
+                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='17' flag='p'}
                         [field:global name='autoindex' runphp='yes']
                         if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
                         else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';

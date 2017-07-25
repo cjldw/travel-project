@@ -1,2 +1,2 @@
 <?php exit('dedecms');?>
-a:2:{s:4:"data";a:1:{s:2:"dd";s:2:"14";}s:7:"timeout";i:1500907316;}
+a:2:{s:4:"data";a:1:{s:2:"dd";s:1:"2";}s:7:"timeout";i:1500993882;}
