@@ -21,6 +21,13 @@
 	display: inline-block;
 	width: 100%;
 }
+.top-recommand {
+    width: 387px;
+	height: 520px;
+}
+.banner-image img {
+	height: 380px;
+}
 
 .indexbanner .bannernextbtn,
 .bannerprevbtn {
@@ -294,6 +301,10 @@
 .themebody .themelist .themebox .themeli a img {
 	display: block;
 	/*max-width: 100%;*/
+}
+.themebody .col-xs-12.col-sm-6.col-md-4.themeli img {
+	width: 385px;
+	height: 331px;
 }
 
 .themebody .themeli .detail {

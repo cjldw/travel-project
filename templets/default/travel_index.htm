@@ -7,11 +7,10 @@
 		<div class="container-fluid indexbanner">
 			<div class="swiper-container swiperbanner">
 				<div class="swiper-wrapper">
-					{dede:loop table='tvl_uploads' sort='' row='4' if='mediatype = 1'}
-                        <div class="swiper-slide"> <img src="[field:url/]" /> </div>
+					{dede:loop table='tvl_uploads' sort=''  row='4' if='mediatype = 1'}
+                        <div class="swiper-slide banner-image"> <img src="[field:url/]" /> </div>
 					{/dede:loop}
 				</div>
-
 				<div class="swiper-button-next bannernextbtn"></div>
 				<div class="swiper-button-prev bannerprevbtn"></div>
 			</div>
@@ -76,7 +75,7 @@
 						-->
 						{dede:arclist flag='h' row='6' orderby='pubdate'}
 						<div class="swiper-slide">
-							<a href="[field:arcurl/]"><img src="[field:picname/]" />
+							<a href="[field:arcurl/]"><img src="[field:picname/]" class="top-recommand" />
 								<div class="recswipertext">
 									<p class="name">[field:title/]</p>
 									<div class="remark">
@@ -115,125 +114,51 @@
 				<div class="themelist">
 					<div class="themelisttop">
 						<span>婚 拍</span>
-						<a href="/static/themetour/">
+						<a href="/static/themetour/wedding">
 							<p>更 多</p>
 						</a>
 					</div>
 
 					<div class="row themebox">
-                        
-						{dede:sql sql="<select name="select * from tvl_anchor;" id=""></select>
-						{/dede:sql}
-
-						<div class="col-xs-12 col-sm-6 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
+						{dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='3' limit='3' flag='p'}
+                        [field:global name='autoindex' runphp='yes']
+                            if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
+                            else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
+                        [/field:global]
+							<a href="[field:arcurl/]">
+								<img src="[field:litpic/]" />
 								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
+									<p><span>[field:shorttitle/]</span><span>[field:title/]</span></p>
 								</div>
 							</a>
 						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-8 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm- col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
+						{/dede:arclist}
 					</div>
-
 				</div>
-
 				<div class="themelist">
 					<div class="themelisttop">
 						<span>亲 子</span>
-						<a href="#">
+						<a href="/static/themetour/relations">
 							<p>更 多</p>
 						</a>
 					</div>
 
 					<div class="row themebox">
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg1.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg2.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg3.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg5.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
+                        <div class="row themebox">
+                            {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='15' limit='3' flag='p'}
+                            [field:global name='autoindex' runphp='yes']
+                            if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
+                            else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
+                                [/field:global]
+                                <a href="[field:arcurl/]">
+                                    <img src="[field:litpic/]" />
+                                    <div class="detail">
+                                        <p><span>[field:shorttitle/]</span><span>[field:title/]</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                            {/dede:arclist}
+                        </div>
 					</div>
 
 				</div>
@@ -241,61 +166,25 @@
 				<div class="themelist">
 					<div class="themelisttop">
 						<span>海 岛</span>
-						<a href="#">
+						<a href="/static/themetour/islands/">
 							<p>更 多</p>
 						</a>
 					</div>
 
 					<div class="row themebox">
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg1.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg2.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg3.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg5.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
+                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='18' limit='3' flag='p'}
+                        [field:global name='autoindex' runphp='yes']
+                        if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
+                        else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
+                            [/field:global]
+                            <a href="[field:arcurl/]">
+                                <img src="[field:litpic/]" />
+                                <div class="detail">
+                                    <p><span>[field:shorttitle/]</span><span>[field:title/]</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        {/dede:arclist}
 					</div>
 
 				</div>
@@ -303,61 +192,25 @@
 				<div class="themelist">
 					<div class="themelisttop">
 						<span>体 育</span>
-						<a href="#">
+						<a href="/static/themetour/sports/">
 							<p>更 多</p>
 						</a>
 					</div>
 
 					<div class="row themebox">
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg1.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg2.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg3.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg5.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
+                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='16' limit='3' flag='p'}
+                        [field:global name='autoindex' runphp='yes']
+                        if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
+                        else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
+                            [/field:global]
+                            <a href="[field:arcurl/]">
+                                <img src="[field:litpic/]" />
+                                <div class="detail">
+                                    <p><span>[field:shorttitle/]</span><span>[field:title/]</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        {/dede:arclist}
 					</div>
 
 				</div>
@@ -365,61 +218,26 @@
 				<div class="themelist">
 					<div class="themelisttop">
 						<span>户 外</span>
-						<a href="#">
+						<a href="/static/themetour/outdoor/">
 							<p>更 多</p>
 						</a>
 					</div>
 
 					<div class="row themebox">
 
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg1.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg2.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg3.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-8 col-md-8 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg4.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
-						<div class="col-xs-12 col-sm-4 col-md-4 themeli">
-							<a href="#">
-								<img src="/img/temporary/themeweddingimg5.jpg" />
-								<div class="detail">
-									<p><span>巴厘岛婚拍</span><span>巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍巴厘岛婚拍</span></p>
-
-								</div>
-							</a>
-						</div>
-
+                        {dede:arclist row='5' titlelen='24' orderby='pubdate' typeid='17' limit='3' flag='p'}
+                        [field:global name='autoindex' runphp='yes']
+                        if(@me == 4) @me = '<div class="col-xs-12 col-sm-8 col-md-8 themeli">';
+                        else @me = '<div class="col-xs-12 col-sm-6 col-md-4 themeli">';
+                            [/field:global]
+                            <a href="[field:arcurl/]">
+                                <img src="[field:litpic/]" />
+                                <div class="detail">
+                                    <p><span>[field:shorttitle/]</span><span>[field:title/]</span></p>
+                                </div>
+                            </a>
+                        </div>
+                        {/dede:arclist}
 					</div>
 
 				</div>
@@ -439,75 +257,20 @@
 					<!--资讯 Begin-->
 
 					<div class="newsbody col-xs-12 col-sm-6 col-md-6">
-
 						<p class="title">最新资讯</p>
-
-						<div class="media">
-							<div class="media-body ">
-								<h1 class="media-heading">旅行资讯</h1>
-								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
-							</div>
-
-							<div class="media-middle media-left media-img">
-								<a href="#">
-									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
-								</a>
-							</div>
-
-						</div>
-						<div class="media">
-							<div class="media-body ">
-								<h1 class="media-heading">旅行资讯</h1>
-								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
-							</div>
-
-							<div class="media-middle media-left media-img">
-								<a href="#">
-									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
-								</a>
-							</div>
-
-						</div>
-						<div class="media">
-							<div class="media-body ">
-								<h1 class="media-heading">旅行资讯</h1>
-								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
-							</div>
-
-							<div class="media-middle media-left media-img">
-								<a href="#">
-									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
-								</a>
-							</div>
-
-						</div>
-						<div class="media">
-							<div class="media-body ">
-								<h1 class="media-heading">旅行资讯</h1>
-								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
-							</div>
-
-							<div class="media-middle media-left media-img">
-								<a href="#">
-									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
-								</a>
-							</div>
-
-						</div>
-						<div class="media">
-							<div class="media-body ">
-								<h1 class="media-heading">旅行资讯</h1>
-								<p>新华社美国海湖庄园4月8日电（记者霍小光　郝薇薇　徐剑梅）4月6日至7日，国家主席习近平在美国佛罗里达州海湖庄园同美国总统特朗普举行会晤。初次谋面，坦诚相见，两国元首达成重要共识，为新时期中美关系发展指明了方向，推动开启合作共赢新篇章。</p>
-							</div>
-
-							<div class="media-middle media-left media-img">
-								<a href="#">
-									<img class="media-object" src="/img/public/indexnewdefaultimg.png" alt="...">
-								</a>
-							</div>
-
-						</div>
-
+                        {dede:arclist row='5' typeid='6'}
+                        <div class="media">
+                            <div class="media-body ">
+                                <h1 class="media-heading">[field:shorttitle/]</h1>
+                                <p>[field:title/]</p>
+                            </div>
+                            <div class="media-middle media-left media-img">
+                                <a href="[field:arcurl/]">
+                                    <img class="media-object" src="[field:litpic/]" alt="...">
+                                </a>
+                            </div>
+                        </div>
+                        {/dede:arclist}
 						<a href="/static/news/" class="newsmore pull-right">
 							<p>更多资讯</p>
 						</a>

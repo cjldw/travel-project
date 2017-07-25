@@ -1,6 +1,5 @@
 .idea
 static
 install
-data/cache
 data/tplcache
 
