@@ -27,6 +27,7 @@ html,body{background-color: #e0f1ee;}
 
 .themetourlist .themetourbox{width: 100%;padding: 0; margin: 0;}
 .themetourlist .themetourbox .themetourli{margin: 15px 0 0 0; padding: 0;}
+.themetourlist .themetourbox .themetourli img{width: 1214px; height: 391px; }
 
 
 .themetourlist .themetourbox .themetourli a{display: block;width: 100%;overflow: hidden;}

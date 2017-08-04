@@ -15,41 +15,20 @@
 <!--活动页面Banner-->
 
 <div class="container-fluid activitylist">
-
-
 	<div class="activitybox row">
+		{dede:arclist  flag='h' typeid='17' row='1' titlelen='40'}
 		<div class="col-xs-12 col-sm-12 col-md-12 activityrec">
-			<a href="#"><img src="/img/activity/activityimg.jpg"/></a>
+			<a href="[field:arcurl/]"><img src="[field:litpic/]"/></a>
+			<p><span>[field:title/]</span></p>
+		</div>
+		{/dede:arclist}
 
-			<p><span>旅游坐标</span></p>
-
-		</div>
-
-
+		{dede:arclist  noflag='h' typeid='17' row='6' titlelen='30'}
 		<div class="col-xs-12 col-sm-6 col-md-6 activityrec">
-			<a href="#"><img src="/img/activity/activityimg2.jpg"/></a>
-			<p><span>旅游坐标</span></p>
+			<a href="[field:arcurl/]"><img src="[field:litpic/]"/></a>
+			<p><span>[field:title/]</span></p>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 activityrec">
-			<a href="#"><img src="/img/activity/activityimg2.jpg"/></a>
-			<p><span>旅游坐标</span></p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 activityrec">
-			<a href="#"><img src="/img/activity/activityimg2.jpg"/></a>
-			<p><span>旅游坐标</span></p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 activityrec">
-			<a href="#"><img src="/img/activity/activityimg2.jpg"/></a>
-			<p><span>旅游坐标</span></p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 activityrec">
-			<a href="#"><img src="/img/activity/activityimg2.jpg"/></a>
-			<p><span>旅游坐标</span></p>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-6 activityrec">
-			<a href="#"><img src="/img/activity/activityimg2.jpg"/></a>
-			<p><span>旅游坐标</span></p>
-		</div>
+		{/dede:arclist}
 	</div>
 </div>
 <!--底部 Begin-->
