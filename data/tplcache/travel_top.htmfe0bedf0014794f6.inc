@@ -1,20 +1,20 @@
 <?php
-$z[0]=Array("global","",259,287);
+$z[0]=Array("global","",264,292);
 $z[0][4]=array();
 $z[0][4]['name']="cfg_soft_lang";
-$z[1]=Array("global","",303,329);
+$z[1]=Array("global","",309,335);
 $z[1][4]=array();
 $z[1][4]['name']="cfg_webname";
-$z[2]=Array("global","",376,406);
+$z[2]=Array("global","",383,413);
 $z[2][4]=array();
 $z[2][4]['name']="cfg_description";
-$z[3]=Array("global","",446,473);
+$z[3]=Array("global","",454,481);
 $z[3][4]=array();
 $z[3][4]['name']="cfg_keywords";
-$z[4]=Array("global","",540,568);
+$z[4]=Array("global","",549,577);
 $z[4][4]=array();
 $z[4][4]['name']="cfg_mobileurl";
-$z[5]=Array("global","",1054,1082);
+$z[5]=Array("global","",1064,1092);
 $z[5][4]=array();
 $z[5][4]['name']="cfg_mobileurl";
 

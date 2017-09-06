@@ -58,8 +58,10 @@ $z[10]=Array("arclist","\r\n                        <div class=\"media\">\r\n   
 $z[10][4]=array();
 $z[10][4]['row']="5";
 $z[10][4]['typeid']="6";
-$z[11]=Array("include","",9606,9650);
+$z[11]=Array("php","\r\n								if(preg_match(\"#2#\", \$safe_gdopen))\r\n								{\r\n								echo '\r\n								<div class=\"form-group\">\r\n									<label for=\"txtPass\">验证码:</label>\r\n									<input type=\"text\" name=\"vdcode\" size=\"8\" class=\"ipt-txt\" />\r\n									<img id=\"vdimgck\" align=\"absmiddle\" onClick=\"this.src=this.src+\\'?\\'\" style=\"cursor:pointer;margin-left:0px;text-transform:uppercase;\" alt=\"看不清？点击更换\" src=\"'.\$cfg_cmspath.'/include/vdimgck.php\"/>\r\n								</div>\r\n								';\r\n								}\r\n								",9038,9556);
 $z[11][4]=array();
-$z[11][4]['filename']="travel_bottom.htm";
+$z[12]=Array("include","",10288,10332);
+$z[12][4]=array();
+$z[12][4]['filename']="travel_bottom.htm";
 
 ?>

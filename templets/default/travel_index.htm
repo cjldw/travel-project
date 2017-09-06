@@ -241,8 +241,8 @@
 
 							<p class="title">快速登录</p>
 
+							<form name="userlogin" action="/member/index_do.php" method="POST">
 							<div class="loginform">
-
 								<div class="form-group">
 									<label for="txtAccount">帐号:</label>
 									<input type="email" class="form-control" id="txtAccount" placeholder="手机号/邮箱">
@@ -251,15 +251,26 @@
 									<label for="txtPass">密码：</label>
 									<input type="password" class="form-control" id="txtPass" placeholder="请输入密码">
 								</div>
-
-								<button type="submit" class="btn pull-right">登录</button>
-
-								<div class="link">
-									<a href="#">忘记密码</a>
-									<a href="">免费注册</a>
+								{dede:php}
+								if(preg_match("#2#", $safe_gdopen))
+								{
+								echo '
+								<div class="form-group">
+									<label for="txtPass">验证码:</label>
+									<input type="text" name="vdcode" size="8" class="ipt-txt" />
+									<img id="vdimgck" align="absmiddle" onClick="this.src=this.src+\'?\'" style="cursor:pointer;margin-left:0px;text-transform:uppercase;" alt="看不清？点击更换" src="'.$cfg_cmspath.'/include/vdimgck.php"/>
 								</div>
-
+								';
+								}
+								{/dede:php}
+								<button type="submit" class="btn pull-right">登录</button>
+								<div class="link">
+									<a href="/member/resetpassword.php">忘记密码</a>
+									<a href="/member/index_do.php?fmdo=user&dopost=regnew">免费注册</a>
+								</div>
 							</div>
+							</form>
+
 
 							<div class="share">
 
