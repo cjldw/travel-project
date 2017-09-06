@@ -167,17 +167,6 @@ border-style: none;
 	margin-top: 16px;
 	cursor:pointer;
 }
-.footer {
-	height:36px;
-	line-height:36px;
-	margin-top: 7px;
-}
-.footer.bor span {
-	float: right;
-}
-.footer.bor span a {
-	float: left;
-}
 .mL10 {
 	margin-left:10px;
 	display: inline;
@@ -217,7 +206,7 @@ border-style: none;
 }
 
 
-/* ç™»å½•box
+/* ?»å?box
 -------------------------------------------------------------------*/
 .red, .red a:link, .red a:visited, a.red:link, a.red:visited {
 color:#FF0000;

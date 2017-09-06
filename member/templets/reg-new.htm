@@ -20,7 +20,7 @@ function changeAuthCode() {
 	if ($("#vdimgck")[0]) {
 		$("#vdimgck")[0].src = "../include/vdimgck.php?tag=" + num;
 	}
-	return false;	
+	return false;
 }
 
 function hideVc()
@@ -29,7 +29,7 @@ function hideVc()
 }
 
 
-$(document).ready(function(){ 
+$(document).ready(function(){
 	$("#passwordLevel").removeClass().addClass("rank r0");
 	$("#vdcode").focus(function(){
 	  var leftpos = $("#vdcode").position().left;
@@ -144,7 +144,7 @@ document.write("午夜好，");
             <?php echo $safefaqs[$faqkey]['question'];?> (答案:<?php echo $safefaqs[$faqkey]['answer'];?>)
            </li>
           <li><span>您的回答是：</span>
-            <input name="rsafeanswer" type="text" id="rsafeanswer" size="25" style='width:200px;' class="intxt w200"/> 
+            <input name="rsafeanswer" type="text" id="rsafeanswer" size="25" style='width:200px;' class="intxt w200"/>
             <input type="hidden" name="faqkey" value="<?php echo $faqkey;?>" />
             <i class="red">*</i> </li>
           <?php

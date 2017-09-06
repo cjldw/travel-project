@@ -35,9 +35,9 @@ body{font-family: "微软雅黑","microsoft yahei",arial;}
 
 
 
-.footer{width: 100%;height: 570px;background: url(../img/public/footerbg.jpg) no-repeat top center;padding: 0 5%; margin: 0;}
+.footer{width: 100%; padding: 0 5%; background: url(../img/public/footerbg.jpg) no-repeat top center;}
 
-.footer .footertop{margin-top: 80px;}
+.footer .footertop{margin-top: 80px; height:300px;}
 .footer .footertop p{color: #043884;line-height: 30px;font-size: 14px;}
 .footer .footertop p span{padding-right: 15px;}
 
