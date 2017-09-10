@@ -11,5 +11,5 @@ $typeArr[17] = '户外';
 $typeArr[12] = '活动';
 $typeArr[18] = '海岛';
 $typeArr[19] = '内容发布';
-$typeArr[20] = '';
+$typeArr[21] = '内容发布';
 ?>
