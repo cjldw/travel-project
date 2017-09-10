@@ -350,7 +350,7 @@ else if($fmdo=='login')
             $cfg_ml->DelCache($cfg_ml->M_ID);
             if(empty($gourl) || preg_match("#action|_do#i", $gourl))
             {
-                ShowMsg("成功登录，5秒钟后转向系统主页...","index.php",0,2000);
+                ShowMsg("成功登录，5秒钟后转向系统主页...","/",0,2000);
             }
             else
             {
@@ -371,7 +371,7 @@ else if($fmdo=='login')
             $ucsynlogin = uc_user_synlogout();
         }
         #/aip}}
-        ShowMsg("成功退出登录！","index.php",0,2000);
+        ShowMsg("成功退出登录！","/",0,2000);
         exit();
     }
 }
@@ -417,5 +417,5 @@ else if($fmdo=='moodmsg')
 }
 else
 {
-    ShowMsg("本页面禁止返回!","index.php");
+    ShowMsg("本页面禁止返回!","/");
 }

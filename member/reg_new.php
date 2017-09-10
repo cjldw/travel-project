@@ -30,7 +30,7 @@ if($step == 1)
                  exit;
             }
         }
-        ShowMsg('你已经登陆系统，无需重新注册！', 'index.php');
+        ShowMsg('你已经登陆系统，无需重新注册！', '/');
         exit();
     }
     if($dopost=='regbase')
