@@ -1,3 +1,11 @@
+{dede:php}
+require_once(DEDEINC.'/memberlogin.class.php');
+$cfg_ml = new MemberLogin();
+if(!$cfg_ml->IsLogin()) {
+ShowMsg('抱歉，请先登录！', '/member/login.php');
+exit();
+}
+{/dede:php}
 {dede:include filename="travel_top.htm"/}
 <link rel="stylesheet" type="text/css" href="/css/usercenter.css" />
 <body>

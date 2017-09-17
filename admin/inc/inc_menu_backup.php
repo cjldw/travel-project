@@ -48,32 +48,6 @@ if($cuserLogin->getUserType() >= 10)
   <m:item name='自由列表管理' link='freelist_main.php' rank='c_List' target='main' />
   <m:item name='自定义表单' link='diy_main.php' rank='c_List' target='main' />
 </m:top>
-
-<m:top item='1_' name='附件管理' display='none' rank='sys_Upload,sys_MyUpload,plus_文件管理器'>
-  <m:item name='上传新文件' link='media_add.php' rank='' target='main' />
-  <m:item name='附件数据管理' link='media_main.php' rank='sys_Upload,sys_MyUpload' target='main' />
-  <m:item name='文件式管理器' link='media_main.php?dopost=filemanager' rank='plus_文件管理器' target='main' />
-</m:top>
-
-<m:top item='3_' name='采集管理' display='none' rank='co_NewRule,co_ListNote,co_ViewNote,co_Switch,co_GetOut'>
-  <m:item name='采集节点管理' link='co_main.php' rank='co_ListNote' target='main' />
-  <m:item name='临时内容管理' link='co_url.php' rank='co_ViewNote' target='main' />
-  <m:item name='导入采集规则' link='co_get_corule.php' rank='co_GetOut' target='main'/>
-  <m:item name='监控采集模式' link='co_gather_start.php' rank='co_GetOut' target='main'/>
-  <m:item name='采集未下载内容' link='co_do.php?dopost=coall' rank='co_GetOut' target='main'/>
-</m:top>
-
-<m:top item='1_3_3' name='批量维护' display='block'>
-  <m:item name='更新系统缓存' link='sys_cache_up.php' rank='sys_ArcBatch' target='main' />
-  <m:item name='文档批量维护' link='content_batch_up.php' rank='sys_ArcBatch' target='main' />
-  <m:item name='搜索关键词维护' link='search_keywords_main.php' rank='sys_Keyword' target='main' />
-  <m:item name='文档关键词维护' link='article_keywords_main.php' rank='sys_Keyword' target='main' />
-  <m:item name='重复文档检测' link='article_test_same.php' rank='sys_ArcBatch' target='main' />
-  <m:item name='自动摘要|分页' link='article_description_main.php' rank='sys_Keyword' target='main' />
-  <m:item name='TAG标签管理' link='tags_main.php' rank='sys_Keyword' target='main' />
-  <m:item name='数据库内容替换' link='sys_data_replace.php' rank='sys_ArcBatch' target='main' />
-</m:top>
-
 ";
 $adminMenu2 = "<m:top item='7_' name='模板管理' display='none' rank='temp_One,temp_Other,temp_MyTag,temp_test,temp_All'>
   <m:item name='默认模板管理' link='templets_main.php' rank='temp_All' target='main'/>
@@ -132,14 +106,32 @@ $menusMain = "
   <m:item name='专题管理' ischannel='1' link='content_s_list.php' linkadd='spec_add.php' channelid='-1' rank='spec_New' target='main' />
 </m:top>
 
-<m:top item='1_' name='首页轮播图' display='none'>
-  <m:item name='轮播图1' link='media_edit1.php?aid=1&dopost=edit' target='main' />
-  <m:item name='轮播图2' link='media_edit1.php?aid=2&dopost=edit' target='main' />
-  <m:item name='轮播图3' link='media_edit1.php?aid=3&dopost=edit' target='main' />
-  <m:item name='轮播图4' link='media_edit1.php?aid=4&dopost=edit' target='main' />
+<m:top item='1_' name='附件管理' display='none' rank='sys_Upload,sys_MyUpload,plus_文件管理器'>
+  <m:item name='上传新文件' link='media_add.php' rank='' target='main' />
+  <m:item name='附件数据管理' link='media_main.php' rank='sys_Upload,sys_MyUpload' target='main' />
+  <m:item name='文件式管理器' link='media_main.php?dopost=filemanager' rank='plus_文件管理器' target='main' />
 </m:top>
 
 $adminMenu1
+
+<m:top item='3_' name='采集管理' display='none' rank='co_NewRule,co_ListNote,co_ViewNote,co_Switch,co_GetOut'>
+  <m:item name='采集节点管理' link='co_main.php' rank='co_ListNote' target='main' />
+  <m:item name='临时内容管理' link='co_url.php' rank='co_ViewNote' target='main' />
+  <m:item name='导入采集规则' link='co_get_corule.php' rank='co_GetOut' target='main'/>
+  <m:item name='监控采集模式' link='co_gather_start.php' rank='co_GetOut' target='main'/>
+  <m:item name='采集未下载内容' link='co_do.php?dopost=coall' rank='co_GetOut' target='main'/>
+</m:top>
+
+<m:top item='1_3_3' name='批量维护' display='block'>
+  <m:item name='更新系统缓存' link='sys_cache_up.php' rank='sys_ArcBatch' target='main' />
+  <m:item name='文档批量维护' link='content_batch_up.php' rank='sys_ArcBatch' target='main' />
+  <m:item name='搜索关键词维护' link='search_keywords_main.php' rank='sys_Keyword' target='main' />
+  <m:item name='文档关键词维护' link='article_keywords_main.php' rank='sys_Keyword' target='main' />
+  <m:item name='重复文档检测' link='article_test_same.php' rank='sys_ArcBatch' target='main' />
+  <m:item name='自动摘要|分页' link='article_description_main.php' rank='sys_Keyword' target='main' />
+  <m:item name='TAG标签管理' link='tags_main.php' rank='sys_Keyword' target='main' />
+  <m:item name='数据库内容替换' link='sys_data_replace.php' rank='sys_ArcBatch' target='main' />
+</m:top>
 
 <m:top item='5_' name='自动任务' notshowall='1'  display='block' rank='sys_MakeHtml'>
   <m:item name='一键更新网站' link='makehtml_all.php' rank='sys_MakeHtml' target='main' />
@@ -169,6 +161,9 @@ $adminMenu1
 </m:top>
 
 $adminMenu2
+
+<m:top item='1_10_7_' name='系统帮助' display='none'>
+</m:top>
 
 -----------------------------------------------
 ";
