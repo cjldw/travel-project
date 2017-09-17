@@ -243,8 +243,8 @@ $cfg_soft_lang = 'utf-8';
 $cfg_soft_public = 'base';
 
 $cfg_softname = '织梦内容管理系统';
-$cfg_soft_enname = 'DedeCMS';
-$cfg_soft_devteam = 'DedeCMS官方团队';
+$cfg_soft_enname = '旅行坐标';
+$cfg_soft_devteam = '旅行坐标技术支持';
 
 //文档的默认命名规则
 $art_shortname = $cfg_df_ext = '.html';

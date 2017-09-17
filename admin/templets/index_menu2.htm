@@ -121,12 +121,13 @@ a.mm:hover div {
   <tr>
     <td valign='top' style='padding-top:10px' width='20'><a id='link1' class='mmac'>
       <div onClick="ShowMainMenu(1)">核心</div>
-      </a> <a id='link6' class='mm'>
-      <div onClick="ShowMainMenu(6)">会员</div>
       </a>
       <?php
   	if($cuserLogin->getUserType() >= 10) {
   	?>
+        <a id='link6' class='mm'>
+      <div onClick="ShowMainMenu(6)">会员</div>
+      </a>
     <a id='link100' class='mm'>
       <div onClick="ShowMainMenu(100)">模块</div>
       </a> <a id='link5' class='mm'>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>文档管理</title>
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<script language="javascript" src="../include/js/dedeajax2.js"></script>
+<script language="javascript" src="js/ieemu.js"></script>
+<script language="javascript" src="js/context_menu.js"></script>
+<script language="javascript" src="js/main.js"></script>
+<script language="javascript" src="js/list.js"></script>
+</head>
+<body leftmargin="8" topmargin="8" background='images/allbg.gif' onLoad="ContextMenu.intializeContextMenu()">
+<!--  内容列表   -->
+<form name="form2">
+<table width="98%" border="0" cellpadding="2" cellspacing="1" bgcolor="#CFCFCF" align="center" style="margin-top:8px">
+    <tr bgcolor="#E7E7E7" >
+        <td height="28" colspan="10" background="images/tbg.gif" style="padding-left:10px;">
+            ◆ {dede:global.positionname/}签证列表
+        </td>
+    </tr>
+<tr align="center" bgcolor="#FBFCE2" height="25">
+	<td width="10%">ID</td>
+	<td width="45%">签证手机号</td>
+	<td width="45%">查询时间</td>
+</tr>
+{dede:datalist}
+<tr align='center' bgcolor="#FFFFFF" height="26" align="center" onMouseMove="javascript:this.bgColor='#FCFDEE';" onMouseOut="javascript:this.bgColor='#FFFFFF';">
+	<td nowrap>
+		{dede:field.id/}
+	</td>
+	<td>13432331111 </td>
+	<td>2017-09-11 12:00:00</td>
+</tr>
+{/dede:datalist}
+</form>
+<tr align="right" bgcolor="#F9FCEF">
+	<td height="36" colspan="10" align="center">
+		{dede:pagelist listsize=3/}
+	</td>
+</tr>
+</table>
+</body>
+</html>

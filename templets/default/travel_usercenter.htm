@@ -174,9 +174,9 @@ exit();
 
                     <div class="form-group">
                         <p>自我介绍</p>
-                        <textarea  class="intro-self" name="" id="" cols="30" rows="10"></textarea>
+                        <textarea  class="intro-self" name="" id="intro-self" cols="30" rows="10"></textarea>
                     </div>
-                    <input type="submit" value="保存" class="submit" />
+                    <input type="submit" value="保存" id="js-userinfo-save" class="submit" />
                     <img id="wechatbind" src="/img/usercenter/wechatbing.jpg">
                 </div>
                 <!--<img src="/img/usercenter/edituserinfo.jpg" />-->
@@ -186,8 +186,8 @@ exit();
 
         <div class="item-info">
             <div class="ca">
-                <input class="ipt" type="text" placeholder="请输入证件号">
-                <button type="button" class="search">查 询</button>
+                <input class="ipt" id="js-visa-ipt" type="text" placeholder="请输入证件号">
+                <button type="button" class="search" id="js-visa">查 询</button>
             </div>
         </div>
 
@@ -244,6 +244,24 @@ exit();
             E_usercenter_content.eq(index).addClass("show").siblings(".item-info").removeClass("show");
         });
 
+        var E_visa = $("#js-visa");
+        var E_visa_input = $("#js-visa-ipt");
+        E_visa.on("click", function (e) {
+            e.preventDefault()
+            var phone = E_visa_input.val();
+            var regex = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g
+            if (!regex.test(phone)) {
+                alert("请输入正确的手机号码！")
+                return
+            }
+            alert("恭喜您， 您的签证正在办理中， 稍后客服会联系您！");
+        });
+
+        var E_intro = $("#js-userinfo-save");
+        E_intro.on("click", function (e) {
+            e.preventDefault();
+            alert("恭喜您， 保存成功");
+        });
     })();
 </script>
 </body>
