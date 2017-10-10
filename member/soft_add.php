@@ -16,6 +16,11 @@ $channelid = isset($channelid) && is_numeric($channelid) ? $channelid : 3;
 $typeid = isset($typeid) && is_numeric($typeid) ? $typeid : 0;
 $menutype = 'content';
 
+$channelid = (int)$channelid;
+if($channelid <= 0) {
+    ShowMsg("频道ID错误!","-1");
+}
+
 /*-------------
 function _ShowForm(){  }
 --------------*/
@@ -53,15 +58,13 @@ if(empty($dopost))
 /*------------------------------
 function _SaveArticle(){  }
 ------------------------------*/
-else if($dopost=='save')
-{
+else if($dopost=='save') {
     $description = '';
     include(DEDEMEMBER.'/inc/archives_check.php');
 
     //生成文档ID
-    $arcID = GetIndexKey($arcrank,$typeid,$sortrank,$channelid,$senddate,$mid);
-    if(empty($arcID))
-    {
+    $arcID = (int)GetIndexKey($arcrank,$typeid,$sortrank,$channelid,$senddate,$mid);
+    if($arcID <= 0) {
         ShowMsg("无法获得主键，因此无法进行后续操作！","-1");
         exit();
     }
@@ -76,31 +79,20 @@ else if($dopost=='save')
         $inadd_v = '';
         if(is_array($addonfields))
         {
-            foreach($addonfields as $v)
-            {
-                if($v=='')
-                {
+            foreach($addonfields as $v) {
+                if($v=='') {
                     continue;
-                }else if($v == 'templet')
-                {
+                }else if($v == 'templet') {
                     ShowMsg("你保存的字段有误,请检查！","-1");
                     exit();    
                 }
                 $vs = explode(',',$v);
-                if(!isset(${$vs[0]}))
-                {
+                if(!isset(${$vs[0]})) {
                     ${$vs[0]} = '';
-                }
-                else if($vs[1]=='htmltext'||$vs[1]=='textdata')
-
-                //HTML文本特殊处理
-                {
+                } else if($vs[1]=='htmltext'||$vs[1]=='textdata') { //HTML文本特殊处理
                     ${$vs[0]} = AnalyseHtmlBody(${$vs[0]},$description,$litpic,$keywords,$vs[1]);
-                }
-                else
-                {
-                    if(!isset(${$vs[0]}))
-                    {
+                } else {
+                    if(!isset(${$vs[0]})) {
                         ${$vs[0]} = '';
                     }
                     ${$vs[0]} = GetFieldValueA(${$vs[0]},$vs[1],$arcID);
@@ -110,35 +102,30 @@ else if($dopost=='save')
             }
         }
         
-        if (empty($dede_fieldshash) || $dede_fieldshash != md5($dede_addonfields.$cfg_cookie_encode))
-        {
+        if (empty($dede_fieldshash) || $dede_fieldshash != md5($dede_addonfields.$cfg_cookie_encode)) {
             showMsg('数据校验不对，程序返回', '-1');
             exit();
         }
         
         // 这里对前台提交的附加数据进行一次校验
         $fontiterm = PrintAutoFieldsAdd($cInfos['fieldset'],'autofield', FALSE);
-        if ($fontiterm != $inadd_f)
-        {
+        if ($fontiterm != $inadd_f) {
             ShowMsg("提交表单同系统配置不相符,请重新提交！", "-1");
             exit();
         }
     }
 
     //处理图片文档的自定义属性
-    if($litpic!='')
-    {
+    if($litpic!='') {
         $flag = 'p';
     }
     $body = HtmlReplace($body,-1);
-
     //保存到主表
     $inQuery = "INSERT INTO `#@__archives`(id,typeid,sortrank,flag,ismake,channel,arcrank,click,money,title,shorttitle,
 color,writer,source,litpic,pubdate,senddate,mid,description,keywords)
 VALUES ('$arcID','$typeid','$sortrank','$flag','$ismake','$channelid','$arcrank','0','$money','$title','$shorttitle',
 '$color','$writer','$source','$litpic','$pubdate','$senddate','$mid','$description','$keywords'); ";
-    if(!$dsql->ExecuteNoneQuery($inQuery))
-    {
+    if(!$dsql->ExecuteNoneQuery($inQuery)) {
         $gerr = $dsql->GetError();
         $dsql->ExecuteNoneQuery("Delete From `#@__arctiny` where id='$arcID' ");
         ShowMsg("把数据保存到数据库主表 `#@__archives` 时出错，请联系管理员。","javascript:;");
@@ -150,24 +137,19 @@ VALUES ('$arcID','$typeid','$sortrank','$flag','$ismake','$channelid','$arcrank'
     $softurl1 = str_replace(array("{dede:","{/dede:","}"), "#", $softurl1);
     $servermsg1 = str_replace(array("{dede:","{/dede:","}"), "#", $servermsg1);
     $urls = '';
-    if($softurl1!='')
-    {
+    if($softurl1!='') {
         $urls .= "{dede:link islocal='1' text='{$servermsg1}'} $softurl1 {/dede:link}\r\n";
     }
-    for($i=2; $i<=12; $i++)
-    {
-        if(!empty(${'softurl'.$i}))
-        {
+    for($i=2; $i<=12; $i++) {
+        if(!empty(${'softurl'.$i})) {
             $servermsg = str_replace("'","",stripslashes(${'servermsg'.$i}));
             $softurl = stripslashes(${'softurl'.$i});
 			$softurl = str_replace(array("{dede:","{/dede:","}"), "#", $softurl);
 			$servermsg = str_replace(array("{dede:","{/dede:","}"), "#", $servermsg);
-            if($servermsg=='')
-            {
+            if($servermsg=='') {
                 $servermsg = '下载地址'.$i;
             }
-            if($softurl!='' && $softurl!='http://')
-            {
+            if($softurl!='' && $softurl!='http://') {
                 $urls .= "{dede:link text='$servermsg'} $softurl {/dede:link}\r\n";
             }
         }
@@ -180,8 +162,7 @@ VALUES ('$arcID','$typeid','$sortrank','$flag','$ismake','$channelid','$arcrank'
     if($needmoney > 100) $needmoney = 100;
     $cts = $dsql->GetOne("SELECT addtable FROM `#@__channeltype` WHERE id='$channelid' ");
     $addtable = trim($cts['addtable']);
-    if(empty($addtable))
-    {
+    if(empty($addtable)) {
         $dsql->ExecuteNoneQuery("DELETE FROM `#@__archives` WHERE id='$arcID'");
         $dsql->ExecuteNoneQuery("DELETE FROM `#@__arctiny` WHERE id='$arcID'");
         ShowMsg("没找到当前模型[{$channelid}]的主表信息，无法完成操作！。","javascript:;");
@@ -191,8 +172,7 @@ VALUES ('$arcID','$typeid','$sortrank','$flag','$ismake','$channelid','$arcrank'
     os,softrank,officialUrl,officialDemo,softsize,softlinks,introduce,userip,templet,redirecturl,daccess,needmoney{$inadd_f})
     VALUES ('$arcID','$typeid','$filetype','$language','$softtype','$accredit',
     '$os','$softrank','$officialUrl','$officialDemo','$softsize','$urls','$body','$userip','','','0','$needmoney'{$inadd_v});";
-    if(!$dsql->ExecuteNoneQuery($inQuery))
-    {
+    if(!$dsql->ExecuteNoneQuery($inQuery)) {
         $gerr = $dsql->GetError();
         $dsql->ExecuteNoneQuery("DELETE FROM `#@__archives` WHERE id='$arcID'");
         $dsql->ExecuteNoneQuery("DELETE FROM `#@__arctiny` WHERE id='$arcID'");
