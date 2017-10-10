@@ -148,7 +148,8 @@ function SaveUploadInfo($title,$filename,$medaitype=1,$addinfos='')
         $addinfos = GetImageSize($cfg_basedir.$filename,$info);
     }
     $addinfos[2] = @filesize($cfg_basedir.$filename);
-    $row = $dsql->GetOne("SELECT aid,title,url FROM `#@__uploads` WHERE url LIKE '$filename' AND mid='".$cfg_ml->M_ID."'; ");
+    $filename = str_replace(' ', '', $filename);
+    $row = $dsql->GetOne("SELECT aid,title,url FROM `#@__uploads` WHERE url LIKE '$filename' AND mid='".(int)$cfg_ml->M_ID."'; ");
     $uptime = time();
     if(is_array($row))
     {

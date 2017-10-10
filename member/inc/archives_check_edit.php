@@ -8,7 +8,7 @@
  * @license        http://help.dedecms.com/usersguide/license.html
  * @link           http://www.dedecms.com
  */
-if(!defined('DEDEMEMBER')) exit('dedecms');
+if(!defined('DEDEMEMBER')) exit('dedecms garbage');
 
 require_once(DEDEINC."/image.func.php");
 require_once(DEDEINC."/oxwindow.class.php");
@@ -65,7 +65,7 @@ $writer =  cn_substrR(HtmlReplace($writer,1),20);
 if(empty($description)) $description = '';
 $description = cn_substrR(HtmlReplace($description,1),250);
 $keywords = cn_substrR(HtmlReplace($tags,1),30);
-$mid = $cfg_ml->M_ID;
+$mid = (int)$cfg_ml->M_ID;
 
 $midQuery = "SELECT mid FROM `#@__arctiny` WHERE id='$aid'";
 $midRow = $dsql->GetOne($midQuery);
