@@ -12,6 +12,7 @@ if(!empty($_COOKIE['GUEST_BOOK_POS'])) $GUEST_BOOK_POS = $_COOKIE['GUEST_BOOK_PO
 else $GUEST_BOOK_POS = "guestbook.php";
 
 $id = intval($id);
+if ($id <= 0) exit("Request Error!");
 if(empty($job)) $job='view';
 
 if($job=='del' && $g_isadmin)
@@ -51,7 +52,7 @@ else if($job=='editok')
             exit();
         }
     }
-	$msg = HtmlReplace($msg, -1);
+	$msg = str_replace(' ', '', HtmlReplace($msg, -1));
     $dsql->ExecuteNoneQuery("UPDATE `#@__guestbook` SET `msg`='$msg', `posttime`='".time()."' WHERE id='$id' ");
     ShowMsg("成功更改或回复一条留言！", $GUEST_BOOK_POS);
     exit();
