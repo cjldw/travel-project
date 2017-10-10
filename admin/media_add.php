@@ -33,30 +33,20 @@ if($dopost=="upload")
             $upfile_name = ${"upfile".$i."_name"};
             $dpath = MyDate("ymd", $uptime);
 
-            if(in_array($upfile_type, $sparr_image))
-            {
+            if(in_array($upfile_type, $sparr_image)) {
                 $mediatype = 1;
                 $savePath = $cfg_image_dir."/".$dpath;
-            }
-            else if(in_array($upfile_type, $sparr_flash)){
+            } else if(in_array($upfile_type, $sparr_flash)){
                 $mediatype = 2;
                 $savePath = $cfg_other_medias."/".$dpath;
-            }
-            // 2011-6-2 修复附件无法上传的错误(by:tianya)
-            else if(preg_match('#audio|media|video#i', $upfile_type) && preg_match("#\.".$cfg_mediatype."$#i", $upfile_name))
-            {
+            } else if(preg_match('#audio|media|video#i', $upfile_type) && preg_match("#\.".$cfg_mediatype."$#i", $upfile_name)) { // 2011-6-2 修复附件无法上传的错误(by:tianya)
                 $mediatype=3;
                 $savePath = $cfg_other_medias."/".$dpath;
-            }
-            else if(preg_match("#\.".$cfg_softtype."+\.".$cfg_softtype."$#i", $upfile_name))
-            {
+            } else { continue; }
+            /* else if(preg_match("#\.".$cfg_softtype."+\.".$cfg_softtype."$#i", $upfile_name)) {
                 $mediatype=4;
                 $savePath = $cfg_soft_dir."/".$dpath;
-            }
-            else
-            {
-                continue;
-            }
+            } */
             $filename = "{$adminid}_".MyDate("His",$uptime).mt_rand(100,999).$i;
             $fs = explode(".",${"upfile".$i."_name"});
             $filename = $filename.".".$fs[count($fs)-1];
