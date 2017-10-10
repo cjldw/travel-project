@@ -32,6 +32,12 @@ $typeid = isset($typeid) && is_numeric($typeid) ? $typeid : 0;
 $menutype = 'content';
 if(empty($formhtml)) $formhtml = 0;
 
+$channelid = (int)$channelid;
+if($channelid <= 0) {
+    ShowMsg("频道ID错误!", '-1');
+    exit();
+}
+
 /*-------------
 function _ShowForm(){  }
 --------------*/
@@ -211,8 +217,8 @@ else if($dopost=='save')
     }
 
     //生成文档ID
-    $arcID = GetIndexKey($arcrank,$typeid,$sortrank,$channelid,$senddate,$mid);
-    if(empty($arcID))
+    $arcID = (int)GetIndexKey($arcrank,$typeid,$sortrank,$channelid,$senddate,$mid);
+    if($arcID <= 0)
     {
         ShowMsg("无法获得主键，因此无法进行后续操作！","-1");
         exit();
@@ -255,7 +261,7 @@ VALUES ('$arcID','$typeid','$sortrank','$flag','$ismake','$channelid','$arcrank'
     }
 
     //增加积分
-    $dsql->ExecuteNoneQuery("UPDATE `#@__member` SET scores=scores+{$cfg_sendarc_scores} WHERE mid='".$cfg_ml->M_ID."' ; ");
+    $dsql->ExecuteNoneQuery("UPDATE `#@__member` SET scores=scores+{$cfg_sendarc_scores} WHERE mid='".(int)$cfg_ml->M_ID."' ; ");
     //更新统计
     countArchives($channelid);
 
@@ -278,7 +284,7 @@ VALUES ('$arcID','$typeid','$sortrank','$flag','$ismake','$channelid','$arcrank'
         $feed['images'][] = array('url' => $cfg_basehost.'/images/scores.gif', 'link'=> $cfg_basehost);
         uc_feed_note($cfg_ml->M_LoginID,$feed);
 
-        $row = $dsql->GetOne("SELECT `scores`,`userid` FROM `#@__member` WHERE `mid`='".$cfg_ml->M_ID."' AND `matt`<>10");
+        $row = $dsql->GetOne("SELECT `scores`,`userid` FROM `#@__member` WHERE `mid`='".(int)$cfg_ml->M_ID."' AND `matt`<>10");
         uc_credit_note($row['userid'], $cfg_sendarc_scores);
     }
     #/aip}}
