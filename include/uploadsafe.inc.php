@@ -55,6 +55,8 @@ foreach($_FILES as $_key=>$_value)
         {
             exit('Upload filetype not allow !');
         }
+    } else {
+        exit('File extension not Allow !');
     }
 }
 ?>
